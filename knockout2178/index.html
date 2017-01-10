@@ -1,0 +1,19 @@
+<like-widget params="value: likeit"></like-widget>
+
+<script src="require.js"></script>
+<script>
+    require.config({
+        paths: {
+            'knockout': app.root + 'Scripts/knockout-3.4.0',
+            'text': app.root + 'Scripts/text'
+        }
+    });
+
+    require(['text', 'knockout'], function () { });
+</script>
+
+<script>
+ko.applyBindings({
+  likeit: ko.observable()
+});
+</script>
